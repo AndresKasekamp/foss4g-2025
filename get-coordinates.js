@@ -1,19 +1,7 @@
-import fetch from "node-fetch";
-import xlsx from "xlsx";
 import fs from "fs";
-
-const loadExcelData = (filePath) => {
-  const workbook = xlsx.readFile(filePath);
-
-  // Get the first sheet name
-  const sheetName = workbook.SheetNames[0];
-
-  // Get the worksheet
-  const worksheet = workbook.Sheets[sheetName];
-
-  // Convert sheet to JSON
-  return xlsx.utils.sheet_to_json(worksheet);
-};
+import xlsx from "xlsx";
+import fetch from "node-fetch";
+import { loadExcelData } from "./utils.js";
 
 // Step 1: Get Wikidata entity ID from Wikipedia
 async function getWikidataId(city) {
@@ -44,7 +32,7 @@ async function getCoordinates(wikidataId) {
   };
 }
 
-function createGeoJSON(coords, outputPath) {
+const createGeoJSON = (coords, outputPath) => {
   const geojson = {
     type: "FeatureCollection",
     features: coords.map(({ name, accessibility, lat, lon }) => ({
@@ -62,7 +50,7 @@ function createGeoJSON(coords, outputPath) {
 
   fs.writeFileSync(outputPath, JSON.stringify(geojson, null, 2));
   console.log(`GeoJSON file created at ${outputPath}`);
-}
+};
 
 async function processCities(data) {
   const coordinates = [];

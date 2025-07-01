@@ -11,8 +11,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@ngageoint/geopackage": "^4.2.6",
-    "cheerio": "^1.1.0",
     "chrome-launcher": "^1.2.0",
     "lighthouse": "^12.7.0",
     "node-fetch": "^3.3.2",

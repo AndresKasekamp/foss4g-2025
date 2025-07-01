@@ -1,22 +1,9 @@
 import fs from "fs/promises";
-import xlsx from "xlsx";
 import path from "path";
+import xlsx from "xlsx";
 import lighthouse from "lighthouse";
 import * as chromeLauncher from "chrome-launcher";
-
-// Load the Excel file
-export const loadExcelData = (filePath) => {
-  const workbook = xlsx.readFile(filePath);
-
-  // Get the first sheet name
-  const sheetName = workbook.SheetNames[0];
-
-  // Get the worksheet
-  const worksheet = workbook.Sheets[sheetName];
-
-  // Convert sheet to JSON
-  return xlsx.utils.sheet_to_json(worksheet);
-};
+import { loadExcelData } from "./utils.js";
 
 // Convert JSON data to worksheet
 const saveJsonToExcel = (jsonData, outputFilePath) => {
@@ -48,35 +35,41 @@ const deleteTempDirectories = async (basePath) => {
   }
 };
 
-const data = loadExcelData("./FOSS4G_2025.xlsx");
+// Main execution
+async function main() {
+  const data = loadExcelData("./FOSS4G_2025.xlsx");
+  const updatedData = [];
+  
+  for (const row of data) {
+    console.log(`City: ${row.City}, URL: ${row.URL}`);
 
-const updatedData = [];
+    const chrome = await chromeLauncher.launch({ chromeFlags: ["--headless"] });
 
-for (const row of data) {
-  console.log(`City: ${row.City}, URL: ${row.URL}`);
+    const options = {
+      logLevel: "info",
+      output: "json",
+      onlyCategories: ["accessibility"],
+      port: chrome.port,
+    };
 
-  const chrome = await chromeLauncher.launch({ chromeFlags: ["--headless"] });
+    const runnerResult = await lighthouse(row.URL, options);
 
-  const options = {
-    logLevel: "info",
-    output: "json",
-    onlyCategories: ["accessibility"],
-    port: chrome.port,
-  };
+    const accessibility = runnerResult.lhr.categories.accessibility.score * 100;
 
-  const runnerResult = await lighthouse(row.URL, options);
+    await chrome.kill();
+    await deleteTempDirectories(".");
 
-  const accessibility = runnerResult.lhr.categories.accessibility.score * 100;
+    console.log(`Accessibility on ${row.City}:`, accessibility);
 
-  await chrome.kill();
-  await deleteTempDirectories(".");
+    updatedData.push({
+      ...row,
+      accessibility,
+    });
+  }
 
-  console.log(`Accessibility on ${row.City}:`, accessibility);
-
-  updatedData.push({
-    ...row,
-    accessibility,
-  });
+  saveJsonToExcel(updatedData, `./FOSS4G_2025_accessibility.xlsx`);
 }
 
-saveJsonToExcel(updatedData, `./FOSS4G_2025_accessibility.xlsx`);
+main().catch((error) => {
+  console.error("Error in main execution:", error);
+});
