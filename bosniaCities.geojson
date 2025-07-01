@@ -1,0 +1,495 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.1925,
+          44.7725
+        ]
+      },
+      "properties": {
+        "name": "Banja Luka",
+        "accessibility": 88
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.215555555555557,
+          44.75666666666667
+        ]
+      },
+      "properties": {
+        "name": "Bijeljina",
+        "accessibility": 72
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.869166666666667,
+          44.81472222222222
+        ]
+      },
+      "properties": {
+        "name": "Bihać",
+        "accessibility": 83
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.15,
+          44.883333333333
+        ]
+      },
+      "properties": {
+        "name": "Bosanska Krupa",
+        "accessibility": 95
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.809166666667,
+          44.878333333333
+        ]
+      },
+      "properties": {
+        "name": "Brčko",
+        "accessibility": 76
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.943055555556,
+          44.966944444444
+        ]
+      },
+      "properties": {
+        "name": "Cazin",
+        "accessibility": 79
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.7,
+          43.11
+        ]
+      },
+      "properties": {
+        "name": "Čapljina",
+        "accessibility": 80
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.91,
+          44.98
+        ]
+      },
+      "properties": {
+        "name": "Derventa",
+        "accessibility": 57
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.133333333333,
+          44.733333333333
+        ]
+      },
+      "properties": {
+        "name": "Doboj",
+        "accessibility": 92
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.977777777778,
+          43.666666666667
+        ]
+      },
+      "properties": {
+        "name": "Goražde",
+        "accessibility": 70
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.31,
+          44.703055555556
+        ]
+      },
+      "properties": {
+        "name": "Gračanica",
+        "accessibility": 91
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.428055555556,
+          44.8775
+        ]
+      },
+      "properties": {
+        "name": "Gradačac",
+        "accessibility": 58
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.25,
+          45.133333333333
+        ]
+      },
+      "properties": {
+        "name": "Gradiška",
+        "accessibility": 71
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.351666666667,
+          43.826111111111
+        ]
+      },
+      "properties": {
+        "name": "Istočno Sarajevo",
+        "accessibility": 85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.960833333333,
+          43.651388888889
+        ]
+      },
+      "properties": {
+        "name": "Konjic",
+        "accessibility": 54
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.3,
+          44.9
+        ]
+      },
+      "properties": {
+        "name": "Laktaši",
+        "accessibility": 79
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.008055555556,
+          43.826944444444
+        ]
+      },
+      "properties": {
+        "name": "Livno",
+        "accessibility": 80
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.533333333333,
+          44.533333333333
+        ]
+      },
+      "properties": {
+        "name": "Lukavac",
+        "accessibility": 95
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.546666666667,
+          43.198055555556
+        ]
+      },
+      "properties": {
+        "name": "Ljubuški",
+        "accessibility": 83
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.8075,
+          43.34361111111111
+        ]
+      },
+      "properties": {
+        "name": "Mostar",
+        "accessibility": 87
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.658055555556,
+          44.171388888889
+        ]
+      },
+      "properties": {
+        "name": "Novi Travnik",
+        "accessibility": 84
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.693055555556,
+          45.034722222222
+        ]
+      },
+      "properties": {
+        "name": "Orašje",
+        "accessibility": 73
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.7,
+          44.966666666667
+        ]
+      },
+      "properties": {
+        "name": "Prijedor",
+        "accessibility": 92
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.65,
+          44.866666666667
+        ]
+      },
+      "properties": {
+        "name": "Prnjavor",
+        "accessibility": 85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.413055555555555,
+          43.85638888888889
+        ]
+      },
+      "properties": {
+        "name": "Sarajevo",
+        "accessibility": 86
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.492777777778,
+          44.703055555556
+        ]
+      },
+      "properties": {
+        "name": "Srebrenik",
+        "accessibility": 82
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.959166666667,
+          43.083888888889
+        ]
+      },
+      "properties": {
+        "name": "Stolac",
+        "accessibility": 79
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.583333333333,
+          43.366666666667
+        ]
+      },
+      "properties": {
+        "name": "Široki Brijeg",
+        "accessibility": 67
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.321666666667,
+          42.708888888889
+        ]
+      },
+      "properties": {
+        "name": "Trebinje",
+        "accessibility": 80
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.675193,
+          44.5391105
+        ]
+      },
+      "properties": {
+        "name": "Tuzla",
+        "accessibility": 74
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.180555555556,
+          43.989444444444
+        ]
+      },
+      "properties": {
+        "name": "Visoko",
+        "accessibility": 85
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.15,
+          44.45
+        ]
+      },
+      "properties": {
+        "name": "Zavidovići",
+        "accessibility": 80
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.903888888889,
+          44.201666666667
+        ]
+      },
+      "properties": {
+        "name": "Zenica",
+        "accessibility": 91
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.1,
+          44.383333333333
+        ]
+      },
+      "properties": {
+        "name": "Zvornik",
+        "accessibility": 79
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.65,
+          44.45
+        ]
+      },
+      "properties": {
+        "name": "Živinice",
+        "accessibility": 81
+      }
+    }
+  ]
+}

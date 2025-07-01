@@ -1,0 +1,21 @@
+{
+  "name": "foss4g-2025",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@ngageoint/geopackage": "^4.2.6",
+    "cheerio": "^1.1.0",
+    "chrome-launcher": "^1.2.0",
+    "lighthouse": "^12.7.0",
+    "node-fetch": "^3.3.2",
+    "xlsx": "^0.18.5"
+  }
+}
