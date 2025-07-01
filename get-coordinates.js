@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 import { loadExcelData } from "./utils.js";
 
 // Step 1: Get Wikidata entity ID from Wikipedia
-async function getWikidataId(city) {
+const getWikidataId = async (city) => {
   const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(
     city
   )}&prop=pageprops&format=json`;
@@ -14,10 +14,10 @@ async function getWikidataId(city) {
 
   const page = Object.values(data.query.pages)[0];
   return page.pageprops.wikibase_item;
-}
+};
 
 // Step 2: Get coordinates from Wikidata
-async function getCoordinates(wikidataId) {
+const getCoordinates = async (wikidataId) => {
   const url = `https://www.wikidata.org/wiki/Special:EntityData/${wikidataId}.json`;
 
   const res = await fetch(url);
@@ -30,7 +30,7 @@ async function getCoordinates(wikidataId) {
     lat: coords.latitude,
     lon: coords.longitude,
   };
-}
+};
 
 const createGeoJSON = (coords, outputPath) => {
   const geojson = {
@@ -52,7 +52,7 @@ const createGeoJSON = (coords, outputPath) => {
   console.log(`GeoJSON file created at ${outputPath}`);
 };
 
-async function processCities(data) {
+const processCities = async (data) => {
   const coordinates = [];
   const coordinatesMissing = ["Prnjavor", "Gračanica", "Gradiška"]; // NOTE: Quick workaround for missing coordinates
 
@@ -82,7 +82,7 @@ async function processCities(data) {
   }
 
   return coordinates;
-}
+};
 
 // Main execution
 async function main() {

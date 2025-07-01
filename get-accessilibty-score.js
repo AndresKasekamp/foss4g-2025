@@ -39,7 +39,7 @@ const deleteTempDirectories = async (basePath) => {
 async function main() {
   const data = loadExcelData("./FOSS4G_2025.xlsx");
   const updatedData = [];
-  
+
   for (const row of data) {
     console.log(`City: ${row.City}, URL: ${row.URL}`);
 
@@ -53,11 +53,9 @@ async function main() {
     };
 
     const runnerResult = await lighthouse(row.URL, options);
-
     const accessibility = runnerResult.lhr.categories.accessibility.score * 100;
-
     await chrome.kill();
-    await deleteTempDirectories(".");
+    //await deleteTempDirectories("."); // May not be necessary, if you are not using WSL
 
     console.log(`Accessibility on ${row.City}:`, accessibility);
 
@@ -67,7 +65,7 @@ async function main() {
     });
   }
 
-  saveJsonToExcel(updatedData, `./FOSS4G_2025_accessibility.xlsx`);
+  saveJsonToExcel(updatedData, "./FOSS4G_2025_accessibility.xlsx");
 }
 
 main().catch((error) => {

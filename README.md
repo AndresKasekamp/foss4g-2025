@@ -9,7 +9,7 @@ Map Gallery Submission. The city website URL-s are from Wikipedia [List of citie
 
 ## 🏃 Running
 
-1. Make sure you node installed.
+1. Make sure you have node installed
 
 ```bash
 node -v
