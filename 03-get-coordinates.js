@@ -62,14 +62,11 @@ const createGeoJSON = (coords, outputPath) => {
 
 const processCities = async (data) => {
   const coordinates = [];
-  const coordinatesMissing = ["Prnjavor", "Gračanica", "Gradiška"]; // NOTE: Quick workaround for missing coordinates
-
+  const bosniaSuffix = ", Bosnia and Herzegovina";
   for (const row of data) {
     try {
       let city = row.city;
-      if (coordinatesMissing.includes(city)) {
-        city += ", Bosnia and Herzegovina";
-      }
+
       console.log(`Processing city: ${city}`);
 
       const wikidataId = await getWikidataId(city);
@@ -78,8 +75,13 @@ const processCities = async (data) => {
       const coords = await getCoordinates(wikidataId);
       console.log(`${city} coordinates:`, coords);
 
+      // Clean up city name for Bosnia and Herzegovina
+      if (city.endsWith(bosniaSuffix)) {
+        city = city.slice(0, -bosniaSuffix.length);
+      }
+
       coordinates.push({
-        name: row.city,
+        name: city,
         accessibility: Math.round(row.accessibility),
         lat: coords.lat,
         lon: coords.lon,
