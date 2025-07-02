@@ -1,19 +1,27 @@
 import fs from "fs";
-import xlsx from "xlsx";
 import fetch from "node-fetch";
-import { loadExcelData } from "./utils.js";
+import {
+  loadExcelData,
+  geoJSONData,
+  excelCityWebsitesAccessibility,
+  WIKIPEDIA_API_URL,
+} from "./utils.js";
 
-// Step 1: Get Wikidata entity ID from Wikipedia
 const getWikidataId = async (city) => {
-  const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(
-    city
-  )}&prop=pageprops&format=json`;
+  const queryParams = new URLSearchParams({
+    action: "query",
+    titles: city,
+    prop: "pageprops",
+    format: "json",
+  });
+
+  const url = `${WIKIPEDIA_API_URL}?${queryParams.toString()}`;
 
   const res = await fetch(url);
   const data = await res.json();
 
   const page = Object.values(data.query.pages)[0];
-  return page.pageprops.wikibase_item;
+  return page?.pageprops?.wikibase_item ?? null;
 };
 
 // Step 2: Get coordinates from Wikidata
@@ -58,7 +66,7 @@ const processCities = async (data) => {
 
   for (const row of data) {
     try {
-      let city = row.City;
+      let city = row.city;
       if (coordinatesMissing.includes(city)) {
         city += ", Bosnia and Herzegovina";
       }
@@ -71,13 +79,13 @@ const processCities = async (data) => {
       console.log(`${city} coordinates:`, coords);
 
       coordinates.push({
-        name: row.City,
+        name: row.city,
         accessibility: Math.round(row.accessibility),
         lat: coords.lat,
         lon: coords.lon,
       });
     } catch (error) {
-      console.error(`Error processing city ${row.City}:`, error);
+      console.error(`Error processing city ${row.city}:`, error);
     }
   }
 
@@ -86,9 +94,9 @@ const processCities = async (data) => {
 
 // Main execution
 async function main() {
-  const data = loadExcelData("./FOSS4G_2025_accessibility.xlsx");
+  const data = loadExcelData(excelCityWebsitesAccessibility);
   const coordinates = await processCities(data);
-  createGeoJSON(coordinates, "./bosniaCities.geojson");
+  createGeoJSON(coordinates, geoJSONData);
 }
 
 main().catch((error) => {

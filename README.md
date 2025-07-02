@@ -1,4 +1,5 @@
 # FOSS4G-2025
+
 ![Wikidata Badge](https://img.shields.io/badge/Wikidata-069?logo=wikidata&logoColor=fff&style=for-the-badge)
 ![Wikipedia Badge](https://img.shields.io/badge/Wikipedia-000?logo=wikipedia&logoColor=fff&style=for-the-badge)
 ![Node.js Badge](https://img.shields.io/badge/Node.js-5FA04E?logo=nodedotjs&logoColor=fff&style=for-the-badge)
@@ -21,18 +22,27 @@ node -v
 npm i
 ```
 
-3. Get the accessibility scores (uses lighthouse)
+3. Get the city names and urls scores (uses Wikipedia API and ReGex)
 
 ```bash
-node get-accessibility-score.js
+node 01-get-cities-with-url.js
 ```
 
-4. Get the city coordinates (uses Wikidata)
+📌 Note: some website were missing (Livno and Prnjavor). Additionally, Laktaši directed to some Korean casino site. So I added them manually.
+
+4. Get the website accessibility scores (uses lighthouse)
 
 ```bash
-node get-coordinates.js
+node 02-get-accessibility-score.js
 ```
 
+5. Get the city coordinates (uses Wikidata) in GeoJSON
+
+```bash
+node 03-get-coordinates.js
+```
+
+Then the visualization was done in QGIS and the final output can be seen in [output/foss4g-2025-kasekamp.png](output/foss4g-2025-kasekamp.png).
 
 ## 🤴 Contact
 
@@ -49,3 +59,5 @@ node get-coordinates.js
         src="https://maaruum.ee/sites/default/files/Maa-%20ja%20Ruumiamet_sinine.svg">
 </div>
 <br>
+
+

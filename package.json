@@ -12,8 +12,10 @@
   "type": "module",
   "dependencies": {
     "chrome-launcher": "^1.2.0",
+    "infobox-parser": "^3.6.4",
     "lighthouse": "^12.7.0",
     "node-fetch": "^3.3.2",
+    "wtf_wikipedia": "^10.4.0",
     "xlsx": "^0.18.5"
   }
 }
