@@ -42,7 +42,7 @@ node 02-get-accessibility-score.js
 node 03-get-coordinates.js
 ```
 
-Then the visualization was done in QGIS and the final output can be seen in [output/foss4g-2025-kasekamp.png](output/foss4g-2025-kasekamp.png).
+Then the visualization was done in QGIS and the final output can be seen in [output/foss4g-2025-kasekamp.png](output/foss4g-2025-kasekamp.png). Intermediate outputs are in [data](/data/) directory.
 
 ## 🤴 Contact
 
@@ -59,5 +59,3 @@ Then the visualization was done in QGIS and the final output can be seen in [out
         src="https://maaruum.ee/sites/default/files/Maa-%20ja%20Ruumiamet_sinine.svg">
 </div>
 <br>
-
-
