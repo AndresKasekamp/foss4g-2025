@@ -1,4 +1,4 @@
-# FOSS4G-2025
+# FOSS4G Europe 2025
 
 ![Wikidata Badge](https://img.shields.io/badge/Wikidata-069?logo=wikidata&logoColor=fff&style=for-the-badge)
 ![Wikipedia Badge](https://img.shields.io/badge/Wikipedia-000?logo=wikipedia&logoColor=fff&style=for-the-badge)
@@ -6,7 +6,7 @@
 ![Qgis Badge](https://img.shields.io/badge/Qgis-589632?logo=qgis&logoColor=fff&style=for-the-badge)
 ![Lighthouse Badge](https://img.shields.io/badge/Lighthouse-F44B21?logo=lighthouse&logoColor=fff&style=for-the-badge)
 
-Map Gallery Submission. The city website URL-s are from Wikipedia [List of cities in Bosnia and Herzegovina](https://en.wikipedia.org/wiki/List_of_cities_in_Bosnia_and_Herzegovina).
+Map Gallery Submission for [FOSS4G Europe 2025 Mostar](https://2025.europe.foss4g.org/). The city website URL-s are from Wikipedia [List of cities in Bosnia and Herzegovina](https://en.wikipedia.org/wiki/List_of_cities_in_Bosnia_and_Herzegovina).
 
 ## 🏃 Running
 
